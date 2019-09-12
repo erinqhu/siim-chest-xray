@@ -19,8 +19,10 @@ i.e.: Since our reading order is first left to right, then up to down. In the ab
 `siim_fastai.ipynb` Training models using fastai (PyTorch) with Resnet34.
 ## Results
 __Keras with VGG16:__ achieves 79.02% accuracy after ten epochs of training with the best accuracy appears at the 6th epoch.<br>
-__fastai with Resnet34:__ achieves over 85% accuracy after five epoch of training.<br><br>
+![result_cnn](https://github.com/erinqhu/siim-chest-xray/blob/master/results/result_cnn.png)
+__fastai with Resnet34:__ achieves over 85% accuracy after five epoch of training.
+![result_fastai](https://github.com/erinqhu/siim-chest-xray/blob/master/results/result_fastai.png)
+<br><br>
 _Thoughts:_
 * `fastai with Resnet34` model trains with higher resolution (224x224) images, while `Keras with VGG16` model uses 150 by 150 images to speed up training time
-
 * `fastai with Resnet34` model uses `max_lr=slice(start_lr, end_lr)` varying learning rates in different layers, while `Keras with VGG16` model sticks with a single learning rate.
